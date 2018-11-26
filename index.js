@@ -3,8 +3,7 @@ const mongoose = require('mongoose');
 const Dishes = require('./models/dishes');
 const vars = require('./vars');
 
-const url = vars.MONGO_URL;
-const connect = mongoose.connect(url, {useNewUrlParser: true});
+const connect = mongoose.connect(vars.MONGO_URL, {useNewUrlParser: true});
 
 connect.then((db) => {
     console.log('Connected correctly to server');
